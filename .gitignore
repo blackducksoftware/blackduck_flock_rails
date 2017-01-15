@@ -11,6 +11,6 @@
 /log/*
 !/log/.keep
 /tmp
-
+.byebug_history
 .env
 *.swp
