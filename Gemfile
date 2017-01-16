@@ -27,6 +27,7 @@ gem "haml-rails", "~> 0.9"
 gem 'sprockets', '>= 3.0.0'
 gem 'sprockets-es6'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'simple_form'
 
 group :development, :test do
   gem 'byebug'

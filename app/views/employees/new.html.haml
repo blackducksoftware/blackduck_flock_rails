@@ -1,0 +1,5 @@
+= simple_form_for @employee do |f|
+  = f.input :first_name, error: 'Please enter a first name'
+  = f.input :last_name, error: 'Please enter a last name'
+  = f.input :title, error: 'Please enter a title'
+  = f.button :submit

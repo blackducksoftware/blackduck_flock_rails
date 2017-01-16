@@ -9,8 +9,11 @@ class EmployeesController < ApplicationController
 
   def create
     @employee = Employee.new(employee_params)
-    @employee.save
-    redirect_to employees_path 
+    if  @employee.save
+      redirect_to employees_path 
+    else
+      render :new
+    end
   end
 
   private
