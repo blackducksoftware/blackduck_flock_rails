@@ -27,9 +27,9 @@ RSpec.describe EmployeesController, type: :controller do
     end
 
     it 'should not create a valid employee with blank parameters' do
-      post :create, employee: { first_name: '', last_name: '', title: '' }
+      post :create, employee: { first_name: '', last_name: '', title: '', department: '' }
       should render_template('new')
-      expect(Employee.count).to eq(j)
+      expect(Employee.count).to eq(0)
     end
   end
 end

@@ -4,7 +4,7 @@ class CreateEmployees < ActiveRecord::Migration
       t.string :first_name, null: false
       t.string :last_name, null: false
       t.string :title, null: false
-
+      t.string :department, null: false
       t.timestamps null: false
     end
   end

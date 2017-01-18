@@ -119,3 +119,27 @@ guard :rspec, cmd: "bundle exec rspec" do
     Dir[File.join("**/#{m[1]}.feature")][0] || "spec/acceptance"
   end
 end
+
+guard 'migrate' do
+  watch(%r{^db/migrate/(\d+).+\.rb})
+  watch('db/seeds.rb')
+end
+
+guard 'brakeman', :run_on_start => true do
+  watch(%r{^app/.+\.(erb|haml|rhtml|rb)$})
+  watch(%r{^config/.+\.rb$})
+  watch(%r{^lib/.+\.rb$})
+  watch('Gemfile')
+end
+
+guard :bundler do
+  require 'guard/bundler'
+  require 'guard/bundler/verify'
+  helper = Guard::Bundler::Verify.new
+
+  files = ['Gemfile']
+  files += Dir['*.gemspec'] if files.any? { |f| helper.uses_gemspec?(f) }
+
+  # Assume files are symlinked from somewhere
+  files.each { |file| watch(helper.real_path(file)) }
+end

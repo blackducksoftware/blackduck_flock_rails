@@ -34,7 +34,6 @@ group :development, :test do
 end
 
 group :test do
-  gem 'm'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
@@ -51,6 +50,9 @@ group :development do
   gem 'guard'
   gem 'guard-livereload', '~> 2.5', require: false
   gem 'guard-haml'
+  gem 'guard-brakeman'
+  gem 'guard-bundler'
+  gem 'guard-migrate'
   gem 'guard-rspec', require: false
   gem "rack-livereload"
 end

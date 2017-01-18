@@ -1,5 +1,10 @@
+- departments = ['Accounting', 'Customer Success', 'Engineering', 'Human Resources', 'Information Technology',
+                             'Legal', 'Marketing', 'On-Demand Delivery', 'On-Demand Sales', 'On-Demand Sales', 'Sales',
+                              'Sales & Marketing', 'Ops'] 
+
 = simple_form_for @employee do |f|
   = f.input :first_name, error: 'Please enter a first name'
   = f.input :last_name, error: 'Please enter a last name'
   = f.input :title, error: 'Please enter a title'
+  = f.input :department, collection: departments,  error: 'Please select a department'
   = f.button :submit
