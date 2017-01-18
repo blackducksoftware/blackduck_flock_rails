@@ -5,11 +5,13 @@ gem 'rails', '4.2.6'
 gem 'pg', '~> 0.15'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
+gem 'carrierwave', '~> 1.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
+gem 'fog'
 gem 'jquery-rails'
+gem 'mini_magick'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
@@ -31,6 +33,7 @@ gem 'simple_form'
 
 group :development, :test do
   gem 'byebug'
+  gem 'dotenv-rails'
 end
 
 group :test do
@@ -50,7 +53,6 @@ group :development do
   gem 'guard'
   gem 'guard-livereload', '~> 2.5', require: false
   gem 'guard-haml'
-  gem 'guard-brakeman'
   gem 'guard-bundler'
   gem 'guard-migrate'
   gem 'guard-rspec', require: false

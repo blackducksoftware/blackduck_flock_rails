@@ -125,13 +125,6 @@ guard 'migrate' do
   watch('db/seeds.rb')
 end
 
-guard 'brakeman', :run_on_start => true do
-  watch(%r{^app/.+\.(erb|haml|rhtml|rb)$})
-  watch(%r{^config/.+\.rb$})
-  watch(%r{^lib/.+\.rb$})
-  watch('Gemfile')
-end
-
 guard :bundler do
   require 'guard/bundler'
   require 'guard/bundler/verify'

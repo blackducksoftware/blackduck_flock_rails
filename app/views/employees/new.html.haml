@@ -7,4 +7,5 @@
   = f.input :last_name, error: 'Please enter a last name'
   = f.input :title, error: 'Please enter a title'
   = f.input :department, collection: departments,  error: 'Please select a department'
+  = f.file_field :avatar, error: 'Please upload an image'
   = f.button :submit
