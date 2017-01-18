@@ -3,6 +3,6 @@ class Employee < ActiveRecord::Base
   validates :last_name, presence: true
   validates :title, presence: true
   validates :department, presence: true
-  
-  mount_uploader :avatar, EmployeeAvatarUploader
+  validates :avatar, presence: true 
+  mount_uploader :avatar, EmployeeAvatarUploader, on: :file_name
 end

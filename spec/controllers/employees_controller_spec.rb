@@ -26,10 +26,28 @@ RSpec.describe EmployeesController, type: :controller do
       should redirect_to(action: :index)
     end
 
-    it 'should not create a valid employee with blank parameters' do
-      post :create, employee: { first_name: '', last_name: '', title: '', department: '' }
+    it 'should not save an invalid employee with blank parameters' do
+      post :create, employee: { first_name: '', last_name: '', title: '', department: '', avatar: '' }
       should render_template('new')
       expect(Employee.count).to eq(0)
+    end
+
+    it 'should not save an employee with an invalid avatar extention' do
+      invalid_employee_params = FactoryGirl.attributes_for(:employee_with_txt_avatar)
+      expect { post :create, employee: invalid_employee_params }.to_not change(Employee, :count)
+      should render_template('new')
+    end 
+
+    it 'should save an employee with a jpeg avatar extension' do
+      employee_params = FactoryGirl.attributes_for(:employee_with_jpeg_avatar)
+      expect { post :create, employee: employee_params }.to change(Employee, :count).by(1)
+      should redirect_to(action: :index)
+    end
+
+    it 'should save an employee with a jpg avatar extension' do
+      employee_params = FactoryGirl.attributes_for(:employee_with_jpg_avatar)
+      expect { post :create, employee: employee_params }.to change(Employee, :count).by(1)
+      should redirect_to(action: :index)
     end
   end
 end

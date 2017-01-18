@@ -6,6 +6,7 @@
   = f.input :first_name, error: 'Please enter a first name'
   = f.input :last_name, error: 'Please enter a last name'
   = f.input :title, error: 'Please enter a title'
-  = f.input :department, collection: departments,  error: 'Please select a department'
+  = f.input :department, collection: departments, error: 'Please select a department'
+  //This error message does not appear TODO:
   = f.file_field :avatar, error: 'Please upload an image'
   = f.button :submit
