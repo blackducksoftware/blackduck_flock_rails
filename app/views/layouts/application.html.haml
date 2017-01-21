@@ -6,4 +6,17 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    %nav.navbar.navbar-inverse.navbar-fixed-top
+    .container
+      .navbar-header
+        .nav-collapse
+    .container
+    .starter-template
     = yield
+    %nav.navbar.navbar-inverse.navbar-fixed-bottom
+    .container
+      .navbar-header
+        .nav-collapse
+    .container
+    .starter-template
+

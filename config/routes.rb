@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   end
 
   root 'home#index'
-  resources :employees
+  resources :employees, only: [:index]
 end

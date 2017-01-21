@@ -12,9 +12,12 @@ class EmployeeDashboard < Administrate::BaseDashboard
     first_name: Field::String,
     last_name: Field::String,
     title: Field::String,
-    department: Field::String,
+    department: Field::SelectBasic.with_options({
+      choices: ['Accounting', 'Customer Success', 'Engineering', 'Human Resources', 'Information Technology',
+                'Legal', 'Marketing', 'On-Demand Delivery', 'On-Demand Sales', 'On-Demand Sales', 'Sales',
+                'Sales & Marketing', 'Ops']}), 
     team: Field::String,
-    avatar: Field::String,
+    avatar: Field::Carrierwave.with_options(image: :thumb, multiple: false),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -29,6 +32,8 @@ class EmployeeDashboard < Administrate::BaseDashboard
     :first_name,
     :last_name,
     :title,
+    :department,
+    :team
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES

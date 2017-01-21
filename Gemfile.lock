@@ -49,6 +49,11 @@ GEM
       rails (>= 4.2, < 5.1)
       sass-rails (~> 5.0)
       selectize-rails (~> 0.6)
+    administrate-field-carrierwave (0.1.0)
+      administrate (~> 0.3.0)
+      rails (>= 4.2)
+    administrate-field-select (2.1.0)
+      administrate (~> 0.1, >= 0.1.5)
     arel (6.0.4)
     autoprefixer-rails (6.6.1)
       execjs
@@ -453,6 +458,8 @@ PLATFORMS
 
 DEPENDENCIES
   administrate (~> 0.3.0)
+  administrate-field-carrierwave (~> 0.1.0)
+  administrate-field-select (~> 2.0)
   better_errors
   bootstrap-sass (~> 3.3.6)
   bourbon
