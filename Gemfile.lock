@@ -455,6 +455,7 @@ DEPENDENCIES
   administrate (~> 0.3.0)
   better_errors
   bootstrap-sass (~> 3.3.6)
+  bourbon
   brakeman
   byebug
   carrierwave (~> 1.0)

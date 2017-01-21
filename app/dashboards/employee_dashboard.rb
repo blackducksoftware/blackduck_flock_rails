@@ -13,9 +13,10 @@ class EmployeeDashboard < Administrate::BaseDashboard
     last_name: Field::String,
     title: Field::String,
     department: Field::String,
+    team: Field::String,
+    avatar: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    avatar: Field::String,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -38,9 +39,10 @@ class EmployeeDashboard < Administrate::BaseDashboard
     :last_name,
     :title,
     :department,
+    :team,
+    :avatar,
     :created_at,
     :updated_at,
-    :avatar,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -51,6 +53,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
     :last_name,
     :title,
     :department,
+    :team,
     :avatar,
   ].freeze
 
