@@ -61,6 +61,7 @@ group :development do
   gem 'guard-bundler'
   gem 'guard-migrate'
   gem 'guard-rspec', require: false
+  gem 'guard-sass'
   gem "rack-livereload"
 end
 

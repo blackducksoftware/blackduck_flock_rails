@@ -7,16 +7,13 @@
     = csrf_meta_tags
   %body
     %nav.navbar.navbar-inverse.navbar-fixed-top
-    .container
-      .navbar-header
-        .nav-collapse
-    .container
-    .starter-template
+      .container-fluid
+        .navbar-header
+          .navbar-brand
+            .company-name
+              %img.img-responsive{:src => image_url("company_name.png")}
     = yield
     %nav.navbar.navbar-inverse.navbar-fixed-bottom
-    .container
-      .navbar-header
-        .nav-collapse
-    .container
-    .starter-template
+      %p.bottom-nav-text
+        Any questions or concerns? Please email Daniel Rubio at drubio@blackducksoftware.com 
 
