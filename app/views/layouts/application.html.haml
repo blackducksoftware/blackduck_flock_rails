@@ -12,6 +12,17 @@
           .navbar-brand
             .company-name
               %img.img-responsive{:src => image_url("company_name.png")}
+        .collapse.navbar-collapse
+          - unless user_signed_in?
+            %ul.nav.navbar-nav.navbar-right
+              %li.page-scroll#signin
+                = link_to("Admin Sign In", new_user_session_url)
+          - if user_signed_in?
+            %ul.nav.navbar-nav.navbar-right
+              %li.page-scroll
+                = link_to("Sign Out", destroy_user_session_url)
+              %li.page-scroll
+                = link_to("Admin Dashboard", admin_root_path)
     = yield
     %nav.navbar.navbar-inverse.navbar-fixed-bottom
       %p.bottom-nav-text
