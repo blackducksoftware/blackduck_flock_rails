@@ -6,6 +6,7 @@ gem 'pg', '~> 0.15'
 gem 'administrate', '~> 0.3.0'
 gem 'administrate-field-carrierwave', '~> 0.1.0'
 gem 'administrate-field-select', '~> 2.0', require: 'administrate/field/select_basic'
+gem 'aws-sdk', '~> 2'
 gem 'capybara'
 gem 'devise'
 gem 'bourbon'
@@ -18,7 +19,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'fog'
 gem 'jquery-rails'
 gem 'mini_magick'
-gem 'turbolinks'
+gem 'turbolinks', '~> 5.x'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
@@ -32,8 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem "haml-rails", "~> 0.9"
-gem 'sprockets', '>= 3.0.0'
-gem 'sprockets-es6'
+gem 'sprockets', '~> 3.0'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
 

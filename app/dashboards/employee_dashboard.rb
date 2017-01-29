@@ -9,8 +9,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    first_name: Field::String,
-    last_name: Field::String,
+    name: Field::String,
     title: Field::String,
     department: Field::SelectBasic.with_options({
       choices: ['Accounting', 'Customer Success', 'Engineering', 'Human Resources', 'Information Technology',
@@ -29,8 +28,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :id,
-    :first_name,
-    :last_name,
+    :name,
     :title,
     :department,
     :team
@@ -40,8 +38,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :id,
-    :first_name,
-    :last_name,
+    :name,
     :title,
     :department,
     :team,
@@ -54,8 +51,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :first_name,
-    :last_name,
+    :name,
     :title,
     :department,
     :team,

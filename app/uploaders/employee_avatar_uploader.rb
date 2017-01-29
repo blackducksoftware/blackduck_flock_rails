@@ -10,9 +10,9 @@ class EmployeeAvatarUploader < CarrierWave::Uploader::Base
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
-  def store_dir
-    "uploads/#{model.department.to_s.underscore}/"
-  end
+  #def store_dir
+  #  "uploads/#{model.department.to_s.underscore}/"
+  #end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
@@ -31,7 +31,7 @@ class EmployeeAvatarUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process resize_to_fit: [200, 200]
+    process resize_to_fit: [150, 150]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
