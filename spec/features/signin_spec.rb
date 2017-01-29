@@ -1,8 +1,6 @@
 require 'rails_helper'
 
-describe 'admin user signin proceess' do
-
-  #Todo: Add flash notifications for these tests
+describe 'admin user signin/signout process' do
 
   it 'signs in an existing user admin account' do
     account = FactoryGirl.create(:account)
@@ -24,5 +22,10 @@ describe 'admin user signin proceess' do
     click_link 'Sign Out'
     expect(page).to have_content 'Admin Sign In' 
   end
+
+  it 'should not allow an unauthenticated user to view the admin page' do
+    visit '/admin'
+    expect(page).to have_content 'Log in'
+  end 
 end
 
