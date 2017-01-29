@@ -74,6 +74,9 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-kaminari-views (0.0.5)
+      kaminari (>= 0.13)
+      rails (>= 3.1)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -490,6 +493,7 @@ DEPENDENCIES
   administrate-field-select (~> 2.0)
   aws-sdk (~> 2)
   better_errors
+  bootstrap-kaminari-views
   bootstrap-sass (~> 3.3.6)
   bourbon
   brakeman
@@ -511,6 +515,7 @@ DEPENDENCIES
   haml-rails (~> 0.9)
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   mini_magick
   pg (~> 0.15)
   quiet_assets

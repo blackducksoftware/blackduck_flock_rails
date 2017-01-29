@@ -1,10 +1,10 @@
 FactoryGirl.define do
   factory :employee do
-    first_name "Daniel"
-    last_name "Rubio"
+    name "Daniel Rubio"
     title "Software Engineer"
     department "Engineering"
     team "OpenHub"
+    email "danemail@gmail.com"
     avatar Rack::Test::UploadedFile.new(File.open(File.join(Rails.root, '/spec/fixtures/photos/duck.png')))
  
   end
