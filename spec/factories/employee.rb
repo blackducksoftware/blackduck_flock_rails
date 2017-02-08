@@ -6,7 +6,6 @@ FactoryGirl.define do
     team "OpenHub"
     email "danemail@gmail.com"
     avatar Rack::Test::UploadedFile.new(File.open(File.join(Rails.root, '/spec/fixtures/photos/duck.png')))
- 
   end
 
   factory :employee_with_jpg_avatar, parent: :employee do  

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Admin::UsersController, type: :controller do
-  describe 'admin users' do
+  describe 'no authentication' do
     it 'should view the index page' do
       get :index
       should redirect_to(new_user_session_path)
@@ -25,10 +25,10 @@ RSpec.describe Admin::UsersController, type: :controller do
     end 
   end 
 
-  describe 'admin users' do
+  describe 'authentication' do
     before(:each) do
-      account = FactoryGirl.create(:account)
-      login_as(account, scope: :user) 
+      @account = FactoryGirl.create(:account)
+      sign_in(@account) 
     end
 
     after(:each) do
