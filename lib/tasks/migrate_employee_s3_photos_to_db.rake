@@ -4,6 +4,6 @@ task migrate_s3_photos_to_db: :environment do
   s3.bucket(ENV['S3_BUCKET']).objects.each do |employee|
     name = employee.key.gsub('.jpg', '').gsub('_',' ')
     email = "#{name.scan(/\w+/)[0][0].downcase}" + "#{name.scan(/\w+/)[1].downcase}" + "@blackducksoftware.com"
-    Employee.create(name: name, email: email, avatar: employee.key)
+    Employee.create(name: name, email: email, s3_image: employee.public_url)
   end
 end
