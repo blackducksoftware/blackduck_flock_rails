@@ -13,6 +13,5 @@
 /tmp
 .byebug_history
 .env
-/public
 coverage
 *.swp
