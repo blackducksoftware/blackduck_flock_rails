@@ -10,6 +10,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     name: Field::String,
+    email: Field::String,
     title: Field::String,
     department: Field::SelectBasic.with_options({
       choices: ['Accounting', 'Customer Success', 'Engineering', 'Human Resources', 'Information Technology',
@@ -30,6 +31,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
     :id,
     :name,
     :title,
+    :email,
     :department,
     :team
   ].freeze
@@ -40,6 +42,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
     :id,
     :name,
     :title,
+    :email,
     :department,
     :team,
     :avatar,
@@ -53,6 +56,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :name,
     :title,
+    :email,
     :department,
     :team,
     :avatar,

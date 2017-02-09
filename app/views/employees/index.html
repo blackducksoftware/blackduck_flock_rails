@@ -1,0 +1,22 @@
+<div id='employees'>
+  <input class='search' placeholder='Search by name or email.....' type='text'>
+  <button class='sort' data-sort='name'>
+    Sort by name
+  </button>
+  <ul class='list'>
+    <li>
+      <h3 class='name'>Jonny Stromberg</h3>
+      <p class='email'>1986</p>
+    </li>
+    <li>
+      <h3 class='name'>Jonas Arnklint</h3>
+      <p class='email'>1985</p>
+    </li>
+  </ul>
+</div>
+<script>
+  var options = { 
+    valueNames: [ 'name', 'email' ]
+   };
+  var employeeList = new List('employees', options);
+</script>

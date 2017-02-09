@@ -1,27 +1,25 @@
-.container
-  .row
-    .col-lg-12
-      %h1.page-header Employee Listing
-    .row
-      .col-lg-6
-        .input-group
-          %input.form-control{:placeholder => "Search by name or email.....", :type => "text"}
-            %span.input-group-btn
-              %button.btn.btn-default{:type => "button"} Go!
-    = paginate(@employees)
-    .row
-      .employees
-        - @employees.each do |e|
-          .col-lg-3.col-md-4.col-xs-6.thumbnail
-            = image_tag(e.s3_image) ||kimage_tag(e.avatar.thumb.url)
-            %p
-              = e.name
-            %p
-              = e.email
-            %p
-              = e.title
-            %p
-              = e.department
-            %p
-              = e.team
+#employees
+  %input.search{:placeholder => "Search by name or email.....", :type => "text"}
+  %ul.list
+    - @employees.each do |e|
+      %li
+        %h3.name 
+          = e.name
+        %p.email
+          = e.email
+        %p
+          = e.title
+        %p
+          = e.department
+        %p
+          = e.team
+  %ul.pagination
+
+:javascript 
+  var options = { 
+    valueNames: [ 'name', 'email' ],
+    page: 24,
+    pagination: true
+   };
+  var employeeList = new List('employees', options);
 
