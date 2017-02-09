@@ -2,6 +2,7 @@
   %input.search{:placeholder => "Search by name or email.....", :type => "text"}
   %ul.list
     - @employees.each do |e|
+      = image_tag(e.s3_image) || image_tag(e.avatar.thumb.url)
       %li
         %h3.name 
           = e.name
