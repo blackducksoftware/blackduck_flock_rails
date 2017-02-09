@@ -1,19 +1,25 @@
-#employees
-  %input.search{:placeholder => "Search by name or email.....", :type => "text"}
-  %ul.list
-    - @employees.each do |e|
-      %li
-        %h3.name 
-          = e.name
-        %p.email
-          = e.email
-        %p
-          = e.title
-        %p
-          = e.department
-        %p
-          = e.team
-  %ul.pagination
+.container-fluid
+  .row
+    .col-lg-12
+      %h1
+        Employee Listing
+  #employees
+    .input-group
+      %input.search{:placeholder => "Search by name or email.....", :type => "text"}
+      %ul.list
+        - @employees.each do |e|
+          %li
+            %h3.name 
+              = e.name
+            %p.email
+              = e.email
+            %p
+              = e.title
+            %p
+              = e.department
+            %p
+              = e.team
+      %ul.pagination
 
 :javascript 
   var options = { 
