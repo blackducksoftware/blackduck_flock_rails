@@ -5,22 +5,30 @@
         Employee Listing
   #employees
     .input-group
-      %input.search{:placeholder => "Search by name or email.....", :type => "text"}
-      %ul.list
-        - @employees.each do |e|
-          = image_tag(e.s3_image) || image_tag(e.avatar.thumb.url)
-          %li
-            %h3.name 
-              = e.name
-            %p.email
-              = e.email
-            %p
-              = e.title
-            %p
-              = e.department
-            %p
-              = e.team
-      %ul.pagination
+      %input.search.form-control{:placeholder => "Search by name or email.....", :type => "text", ":aria-describedby" =>"sizing-addon3", :style => 'width: 300px'}
+    %hr
+      .row.text-center
+        .list
+          - @employees.each do |e|
+            .col-md-3.col-sm-6.hero-feature
+              .thumbnail
+                = image_tag(e.s3_image) || image_tag(e.avatar.thumb.url)
+                .caption
+                  %h3.name 
+                    = e.name
+                  %p.email
+                    = e.email
+                  %p
+                    = e.title
+                  %p
+                    = e.department
+                  %p
+                    = e.team
+                - if user_signed_in?
+                  %button.btn.btn-warning
+                    = link_to("Edit",edit_admin_employee_url(e.id))
+        %ul.pagination
+
 :javascript 
   var options = { 
     valueNames: [ 'name', 'email' ],
