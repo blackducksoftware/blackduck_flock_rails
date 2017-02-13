@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Admin::EmployeesController, type: :controller do
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   describe 'no authentication' do
     it 'should not view the index page' do

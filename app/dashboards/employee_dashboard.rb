@@ -14,8 +14,8 @@ class EmployeeDashboard < Administrate::BaseDashboard
     title: Field::String,
     department: Field::SelectBasic.with_options({
       choices: ['Accounting', 'Customer Success', 'Engineering', 'Human Resources', 'Information Technology',
-                'Legal', 'Marketing', 'On-Demand Delivery', 'On-Demand Sales', 'On-Demand Sales', 'Sales',
-                'Sales & Marketing', 'Ops']}), 
+                'Legal', 'Marketing', 'On-Demand Delivery', 'On-Demand Sales', 'Sales',
+                'Sales & Marketing Ops']}), 
     team: Field::String,
     avatar: Field::Carrierwave.with_options(image: :thumb, multiple: false),
     created_at: Field::DateTime,
