@@ -1,0 +1,9 @@
+/home/serv-deployer/.rvm/rubies/ruby-2.2.3/bin/ruby -r ./siteconf20170228-1737-1sxx1zg.rb extconf.rb 
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+make "DESTDIR=" install

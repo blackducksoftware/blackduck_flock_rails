@@ -7,6 +7,7 @@ gem 'administrate', '~> 0.3.0'
 gem 'administrate-field-carrierwave', '~> 0.1.0'
 gem 'administrate-field-select', '~> 2.0', require: 'administrate/field/select_basic'
 gem 'aws-sdk', '~> 2'
+gem 'dotenv-rails'
 gem 'capybara'
 gem 'devise'
 gem 'bourbon'
@@ -39,7 +40,6 @@ gem 'simple_form'
 
 group :development, :test do
   gem 'byebug'
-  gem 'dotenv-rails'
 end
 
 group :test do

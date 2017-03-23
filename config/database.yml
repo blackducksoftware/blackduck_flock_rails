@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: blackduck_flock_rails_production
-  username: blackduck_flock_rails
+  username: postgres
   password: <%= ENV['BLACKDUCK_FLOCK_RAILS_DATABASE_PASSWORD'] %>

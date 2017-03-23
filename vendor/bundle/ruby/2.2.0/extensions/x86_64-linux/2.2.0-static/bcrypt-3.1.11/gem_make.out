@@ -1,0 +1,15 @@
+/home/serv-deployer/.rbenv/versions/2.2.3/bin/ruby -r ./siteconf20170320-47833-lxxtx0.rb extconf.rb 
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling crypt.c
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+compiling bcrypt_ext.c
+linking shared-object bcrypt_ext.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20170320-47833-19ayyqp
