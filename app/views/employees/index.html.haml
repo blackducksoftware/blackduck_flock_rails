@@ -1,6 +1,5 @@
 .container-fluidi{ :style => 'margin-top: 50px;' }
-  .row
-  #employees{ :style => 'margin-top: 50px;' }
+  .row#employees{ :style => 'margin-top: 50px;' }
     .container
       .col-lg-12
         .input-group
@@ -39,7 +38,7 @@
           .list{ :style => 'display: flex; flex-wrap: wrap; flex-grow: 1' }
             - @employees.each do |e|
               .thumbnail{ :style => 'width: 25%' }
-                = image_tag(e.s3_image) || image_tag(e.avatar.thumb.url)
+                %img{:src => e.avatar.thumb.url }
                 .caption
                   %h3.name 
                     = e.name
@@ -59,7 +58,7 @@
 :javascript
   var options = { 
     valueNames: [ 'name', 'email', 'department' ],
-    page: 24,
+    page: 54,
     pagination: true
    };
 
