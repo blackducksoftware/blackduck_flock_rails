@@ -1,8 +1,8 @@
-.container-fluidi{ :style => 'margin-top: 50px;' }
+.container-fluid{ :style => 'margin-top: 50px;' }
   .row#employees{ :style => 'margin-top: 50px;' }
     .container
       .col-lg-12
-        .input-group
+        .input-group{ :style => 'margin-top: 20px' }
           .input-group-btn
             %button.btn.btn-default.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
               All Departments
@@ -58,8 +58,6 @@
 :javascript
   var options = { 
     valueNames: [ 'name', 'email', 'department' ],
-    page: 54,
-    pagination: true
    };
 
   var employeeList = new List('employees', options);
