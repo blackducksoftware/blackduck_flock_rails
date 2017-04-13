@@ -115,6 +115,14 @@
     filter(employeeFilterList, 'Sales & Marketing Ops');
   });
 
+  $('#filter-business-development').click(function() {
+    filter(employeeFilterList, 'Business Development');
+  });
+
+  $('#filter-culture').click(function() {
+    filter(employeeFilterList, 'Culture');
+  });
+
   function filter(employees, department) {
     employees.filter(function(item) {
       if (item.values().department.trim() === department) {
