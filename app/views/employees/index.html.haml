@@ -35,7 +35,7 @@
               %li#filter-sales
                 %a{:href => '#' } Sales
               %li#filter-sales-marketing-ops
-                %a{:href => '#' } Sales & Marketing Ops 
+                %a{:href => '#' } Sales/Marketing Ops 
           %input.search.form-control{:placeholder => "Search by name or email.....", :type => "text", ":aria-describedby" =>"sizing-addon3", :style => 'width: 300px'}
         %hr
         .row.text-center
@@ -116,7 +116,7 @@
   });
 
   $('#filter-sales-marketing-ops').click(function() {
-    filter(employeeFilterList, 'Sales & Marketing Ops');
+    filter(employeeFilterList, 'Sales/Marketing Ops');
   });
 
   $('#filter-business-development').click(function() {
