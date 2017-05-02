@@ -54,6 +54,8 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'better_errors'
   gem 'brakeman'
+  gem "capistrano", "~> 3.8"
+  gem 'capistrano-rails', '~> 1.2'
   gem 'quiet_assets'
   gem 'spring'
   gem 'guard'
