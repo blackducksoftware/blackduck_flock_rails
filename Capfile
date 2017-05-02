@@ -15,6 +15,7 @@ require "capistrano/deploy"
 require "capistrano/scm/git"
 require "capistrano/rails"
 require "capistrano/passenger"
+require 'dotenv/load'
 
 install_plugin Capistrano::SCM::Git
 

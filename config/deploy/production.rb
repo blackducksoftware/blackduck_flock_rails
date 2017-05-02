@@ -3,9 +3,9 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-server ENV['DEPLOY_SERVER'], user: ENV['DEPLOY_USER'], roles: %w{app db web}
+server ENV['DEPLOY_SERVER'], user: ENV['DEPLOY_USER'], roles: %w{app web}
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
-# server "db.example.com", user: "deploy", roles: %w{db}
+server ENV['DEPLOY_SERVER'], user: "postgres", roles: %w{db}
 
 
 
