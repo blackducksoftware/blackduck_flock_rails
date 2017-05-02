@@ -526,7 +526,7 @@ DEPENDENCIES
   bourbon
   brakeman
   byebug
-  capistrano (~> 3.8)
+  capistrano (~> 3.8.1)
   capistrano-passenger
   capistrano-rails (~> 1.2)
   capybara
