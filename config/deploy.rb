@@ -10,6 +10,10 @@ set :repo_url, "git@github.com:drubio1989/blackduck_flock_rails.git"
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/var/local/blackduck_flock_rails"
 
+set :bundle_gemfile, -> { release_path.join('Gemfile') }      # default: nil
+set :bundle_path, -> { shared_path.join(nil) }
+set :bundle_flags, '--verbose'
+
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
