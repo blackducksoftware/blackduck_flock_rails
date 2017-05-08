@@ -17,6 +17,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
                 'Legal', 'Marketing', 'On-Demand Delivery', 'On-Demand Sales', 'Sales',
                 'Sales/Marketing Ops']}), 
     team: Field::String,
+    reports_to: Field::String,
     avatar: Field::Carrierwave.with_options(image: :thumb, multiple: false),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -33,6 +34,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
     :title,
     :email,
     :department,
+    :reports_to,
     :team
   ].freeze
 
@@ -45,6 +47,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
     :email,
     :department,
     :team,
+    :reports_to,
     :avatar,
     :created_at,
     :updated_at,
@@ -59,6 +62,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
     :email,
     :department,
     :team,
+    :reports_to,
     :avatar,
   ].freeze
 

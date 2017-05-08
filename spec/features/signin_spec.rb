@@ -5,10 +5,12 @@ describe 'admin user signin/signout process' do
   it 'signs in an existing user admin account' do
     account = FactoryGirl.create(:account)
     visit '/users/sign_in'
-    within(".form-inputs") do
-      fill_in "Email", with: account.email 
-      fill_in 'Password', with: account.password 
-    end
+    
+    fill_in "user_email", with: account.email 
+    
+    
+    fill_in 'user_password', with: account.password 
+    
     click_button 'Log in'
     expect(page).to have_content 'Sign Out'
     expect(page).to have_content 'Admin Dashboard'

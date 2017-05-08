@@ -5,6 +5,7 @@ FactoryGirl.define do
     department "Engineering"
     team "OpenHub"
     email "danemail@gmail.com"
+    reports_to "Daniel Rubio"
     avatar Rack::Test::UploadedFile.new(File.open(File.join(Rails.root, '/spec/fixtures/photos/duck.png')))
   end
 
