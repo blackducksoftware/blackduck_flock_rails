@@ -15,6 +15,9 @@ require "capistrano/deploy"
 require 'dotenv/load'
 require "capistrano/scm/git"
 require "capistrano/rails"
+require "capistrano/rails/assets"
+require 'capistrano/faster_assets'
+require "capistrano/rails/migrations"
 require "capistrano/rvm"
 require 'capistrano/bundler'
 require "capistrano/passenger"

@@ -57,6 +57,7 @@ group :development do
   gem "capistrano", "~> 3.8.1"
   gem 'capistrano-bundler', '~> 1.2'
   gem 'capistrano-rails', '~> 1.2'
+  gem 'capistrano-faster-assets', '~> 1.0'
   gem 'capistrano-rvm'
   gem 'capistrano-passenger'
   gem 'quiet_assets'
