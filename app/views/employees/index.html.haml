@@ -54,6 +54,8 @@
                     = e.department
                   %p
                     = e.team
+                  %p
+                    = "Reports to #{e.reports_to}"
                 - if user_signed_in?
                   %button.btn.btn-warning
                     = link_to("Edit",edit_admin_employee_url(e.id))
