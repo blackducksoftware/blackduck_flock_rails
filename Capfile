@@ -14,6 +14,7 @@ require "capistrano/deploy"
 # or
 require "capistrano/scm/git"
 require "capistrano/rails"
+require "capistrano/rvm"
 require 'capistrano/bundler'
 require "capistrano/passenger"
 require 'dotenv/load'
