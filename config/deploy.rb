@@ -12,7 +12,7 @@ set :deploy_to, "/var/local/blackduck_flock_rails"
 
 set :bundle_gemfile, -> { release_path.join('Gemfile') }      # default: nil
 set :bundle_path, nil
-set :bundle_flags, '--verbose'
+set :bundle_flags, '--quiet'
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
