@@ -4,6 +4,9 @@
 # You can define all roles on a single server, or split them:
 
 server ENV['DEPLOY_SERVER'], user: ENV['DEPLOY_USER'], roles: %w{app web db}
+set :rails_env, 'production'
+
+set :linked_files, %w(.env.production)
 
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 
