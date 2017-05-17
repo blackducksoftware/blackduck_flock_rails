@@ -7,6 +7,6 @@ Rails.application.routes.draw do
     root to: "employees#index"
   end
 
-  root 'home#index'
+  root 'employees#index'
   resources :employees, only: [:index]
 end
