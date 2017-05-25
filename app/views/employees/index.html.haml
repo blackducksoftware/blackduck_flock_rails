@@ -34,6 +34,8 @@
                 %a{:href => '#' } On-Demand Sales 
               %li#filter-sales
                 %a{:href => '#' } Sales
+              %li#filter-sales-engineering
+                %a{:href => '#' } Sales Engineering
               %li#filter-sales-marketing-ops
                 %a{:href => '#' } Sales/Marketing Ops 
           %input.search.form-control{:placeholder => "Search by name or email.....", :type => "text", ":aria-describedby" =>"sizing-addon3", :style => 'width: 300px'}
@@ -115,6 +117,10 @@
 
   $('#filter-sales').click(function() {
     filter(employeeFilterList, 'Sales');
+  });
+
+  $('#filter-sales-engineering').click(function() {
+    filter(employeeFilterList, 'Sales Engineering');
   });
 
   $('#filter-sales-marketing-ops').click(function() {
