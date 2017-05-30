@@ -16,6 +16,8 @@
                 %a{:href => '#' } Business Development 
               %li#filter-culture
                 %a{:href => '#' } Culture 
+              %li#filter-customer-support
+                %a{:href => '#' } Customer Support 
               %li#filter-customer-success
                 %a{:href => '#' } Customer Success 
               %li#filter-engineering
@@ -81,6 +83,10 @@
 
   $('#filter-accounting').click(function() {
     filter(employeeFilterList, 'Accounting');
+  });
+
+  $('#filter-customer-support').click(function() {
+    filter(employeeFilterList, 'Customer Support');
   });
 
   $('#filter-customer-success').click(function() {
