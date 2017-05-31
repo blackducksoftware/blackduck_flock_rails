@@ -33,7 +33,9 @@
               %li#filter-on-demand-delivery
                 %a{:href => '#' } On-Demand Delivery 
               %li#filter-on-demand-sales
-                %a{:href => '#' } On-Demand Sales 
+                %a{:href => '#' } On-Demand Sales
+              %li#filter-product-management
+                %a{:href => '#' } Product Management 
               %li#filter-sales
                 %a{:href => '#' } Sales
               %li#filter-sales-engineering
@@ -139,6 +141,10 @@
 
   $('#filter-culture').click(function() {
     filter(employeeFilterList, 'Culture');
+  });
+
+  $('#filter-product-management').click(function() {
+    filter(employeeFilterList, 'Product Management');
   });
 
   function filter(employees, department) {
