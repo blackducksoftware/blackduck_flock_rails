@@ -1,5 +1,5 @@
 class EmployeesController < ApplicationController
   def index
-    @employees = Employee.all.order(:first_name)
+    @employees = Employee.all.order(:name)
   end
 end
