@@ -12,6 +12,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
     name: Field::String,
     last_name: Field::String,
     email: Field::String,
+    phone_number: Field::String,
     title: Field::String,
     department: Field::SelectBasic.with_options({
       choices: ['Accounting','Business Development', 'Culture', 'Customer Support', 'Customer Success', 'Engineering', 'Human Resources', 'Information Technology',
@@ -36,8 +37,6 @@ class EmployeeDashboard < Administrate::BaseDashboard
     :title,
     :email,
     :department,
-    :reports_to,
-    :team
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -47,6 +46,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
     :name,
     :title,
     :email,
+    :phone_number,
     :department,
     :team,
     :reports_to,
@@ -62,6 +62,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
     :name,
     :title,
     :email,
+    :phone_number,
     :department,
     :team,
     :reports_to,
