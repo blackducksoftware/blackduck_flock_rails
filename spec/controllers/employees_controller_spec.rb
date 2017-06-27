@@ -8,10 +8,14 @@ RSpec.describe EmployeesController, type: :controller do
       expect(response).to render_template('index')
     end
 
-    it 'should show employees on the index page' do
-      employees = FactoryGirl.create_list(:employee, 2)
+    it 'should sort employees by last name and display on index' do
+      list_of_employees = []
+      list_of_employees << FactoryGirl.create(:employee)
+      list_of_employees << FactoryGirl.create(:employee, name: 'Daniel Abraham')
+      list_of_employees << FactoryGirl.create(:employee, name: 'Daniel Sanchez')
+      list_of_employees << FactoryGirl.create(:employee, name: 'Daniel Diego')
       get :index
-      expect(assigns(:employees)).to eq(employees)
+      expect(assigns(:employees)).to eq(list_of_employees.sort_by { |e| e.last_name })
     end
   end
 end

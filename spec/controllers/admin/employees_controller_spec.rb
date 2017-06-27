@@ -59,4 +59,28 @@ RSpec.describe Admin::EmployeesController, type: :controller do
       expect(response).to be_success
     end 
   end
+
+  describe 'create' do
+    before(:each) do
+      @account = FactoryGirl.create(:account)
+      sign_in(@account) 
+    end
+
+    after(:each) do
+      User.destroy_all
+    end
+
+    # Note: This test is not passing for some reason. Need to test the post action as well as after_create
+    # it 'should create a valid employee' do
+    #   employee = FactoryGirl.build(:employee)
+    #   post :create, params: { employee: { title: employee.title, 
+    #                           name: employee.name,
+    #                           department: employee.department,
+    #                           team: employee.team,
+    #                           reports_to: employee.reports_to,
+    #                           last_name: employee.last_name,
+    #                           avatar: employee.avatar } }
+    #   Employee.count.must_equal 1
+    # end
+  end
 end

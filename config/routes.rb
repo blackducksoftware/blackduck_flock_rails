@@ -8,5 +8,4 @@ Rails.application.routes.draw do
   end
 
   root 'employees#index'
-  resources :employees, only: [:index]
 end
