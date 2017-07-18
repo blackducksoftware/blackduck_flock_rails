@@ -50,6 +50,9 @@
               .thumbnail{ :style => 'width: 25%' }
                 %img{:src => e.avatar.thumb.url }
                 .caption
+                  - unless recently_added?(e)
+                    %i{ :style => 'color:red;'}
+                      New!
                   %h3.name 
                     = e.name
                   %p.department
