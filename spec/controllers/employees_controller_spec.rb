@@ -15,7 +15,7 @@ RSpec.describe EmployeesController, type: :controller do
       list_of_employees << FactoryGirl.create(:employee, name: 'Daniel Sanchez')
       list_of_employees << FactoryGirl.create(:employee, name: 'Daniel Diego')
       get :index
-      expect(assigns(:employees)).to eq(list_of_employees.sort_by { |e| e.name.split.last }.reverse)
+      expect(assigns(:employees)).to eq(list_of_employees.sort_by { |e| e.name.split.last })
     end
   end
 end
