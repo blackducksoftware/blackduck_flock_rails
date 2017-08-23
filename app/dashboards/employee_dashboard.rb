@@ -10,7 +10,6 @@ class EmployeeDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     name: Field::String,
-    last_name: Field::String,
     email: Field::String,
     title: Field::String,
     department: Field::SelectBasic.with_options({
@@ -32,7 +31,6 @@ class EmployeeDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :name,
-    :last_name,
     :title,
     :email,
     :department,

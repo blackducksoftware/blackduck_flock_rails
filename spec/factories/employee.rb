@@ -6,10 +6,7 @@ FactoryGirl.define do
     team "OpenHub"
     sequence(:email) { |n| "email#{n}@gmail.com" }
     reports_to "Daniel Rubio"
-    last_name ''
     avatar Rack::Test::UploadedFile.new(File.open(File.join(Rails.root, '/spec/fixtures/photos/duck.png')))
-
-    before(:create) { |employee| employee.last_name = employee.name.split.last } 
   end
 
   factory :employee_with_jpg_avatar, parent: :employee do  
