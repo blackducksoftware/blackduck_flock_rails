@@ -16,8 +16,6 @@
                 %a{:href => '#' } Business Development 
               %li#filter-culture
                 %a{:href => '#' } Culture 
-              %li#filter-customer-support
-                %a{:href => '#' } Customer Support 
               %li#filter-customer-success
                 %a{:href => '#' } Customer Success 
               %li#filter-engineering
@@ -25,7 +23,9 @@
               %li#filter-human-resources
                 %a{:href => '#' } Human Resources 
               %li#filter-information-technology
-                %a{:href => '#' } Information Technology 
+                %a{:href => '#' } Information Technology
+              %li#filter-intern
+                %a{:href => '#' } Intern
               %li#filter-legal
                 %a{:href => '#' } Legal 
               %li#filter-marketing
@@ -41,7 +41,7 @@
               %li#filter-sales-engineering
                 %a{:href => '#' } Sales Engineering
               %li#filter-sales-marketing-ops
-                %a{:href => '#' } Sales/Marketing Ops 
+                %a{:href => '#' } Sales/Marketing Ops
           %input.search.form-control{:placeholder => "Search by name or email.....", :type => "text", ":aria-describedby" =>"sizing-addon3", :style => 'width: 300px'}
         %hr
         .row.text-center
@@ -90,10 +90,6 @@
     filter(employeeFilterList, 'Accounting');
   });
 
-  $('#filter-customer-support').click(function() {
-    filter(employeeFilterList, 'Customer Support');
-  });
-
   $('#filter-customer-success').click(function() {
     filter(employeeFilterList, 'Customer Success');
   });
@@ -104,6 +100,10 @@
 
   $('#filter-human-resources').click(function() {
     filter(employeeFilterList, 'Human Resources');
+  });
+
+  $('#filter-intern').click(function() {
+    filter(employeeFilterList, 'Intern');
   });
 
   $('#filter-information-technology').click(function() {
